@@ -1,0 +1,1 @@
+module github.com/wallodya/tages-at-k8s/service-1
