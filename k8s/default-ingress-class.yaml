@@ -1,0 +1,10 @@
+apiVersion: tagesApp/v0.1.0
+kind: IngressClass
+metadata:
+  labels:
+    app.kubernetes.io/component: controller
+  name: tages-k8s-ingress
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
+spec:
+  controller: k8s.io/ingress-nginx
