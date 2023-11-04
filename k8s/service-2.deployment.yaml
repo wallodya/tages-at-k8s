@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-2-deployment
+  labels:
+    app: tages-k8s
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tages-k8s
+  template:
+    metadata:
+      labels:
+        app: tages-k8s
+    spec:
+      containers:
+      - name: tages-k8s-service-2
+        image: wallodya/tages-k8s-service-2
+        ports:
+        - containerPort: 3000
